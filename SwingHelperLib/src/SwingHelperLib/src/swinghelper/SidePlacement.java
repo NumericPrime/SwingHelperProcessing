@@ -8,7 +8,7 @@ import javax.swing.*;
 
 import processing.core.PConstants;
 /**Allows placing content to the sides of the processing-content.
- * @autor NumericPrime*/
+ * @author NumericPrime*/
 public class SidePlacement extends SwingManager {
 	/**The active SidePlacement*/
 	public static SidePlacement standart;
@@ -23,7 +23,7 @@ public class SidePlacement extends SwingManager {
 	public final Container[] added=new Container[2];
 	/**
 	 * Adds content to the sides of the processing content
-	 * @param This method uses the container to be added and takes the location in form of an integer.
+	 * @param where This method uses the container to be added and takes the location in form of an integer.
 	 * It accepts LEFT and RIGHT directly typed in the Processing IDE. 
 	 * */
 	public void add(Container c,int where) {

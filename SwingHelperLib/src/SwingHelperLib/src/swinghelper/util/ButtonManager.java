@@ -8,7 +8,7 @@ import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 
 /**Processes the annotations for the JButtons.
- * @autor NumericPrime*/
+ * @author NumericPrime*/
 public class ButtonManager {
 	/**Processes the MethodButton annotation*/
 	public static void actionList(Object obj) {
@@ -35,7 +35,7 @@ public class ButtonManager {
 				}
 	}
 	/**Processes the annotations MethodButton and ColorScheme
-	 * @param It takes the object in wich the annotations are used. In most cases inputing <b>this</b> will suffice.*/
+	 * @param obj It takes the object in wich the annotations are used. In most cases inputing <b>this</b> will suffice.*/
 	public static void readSettings(Object obj) {
 		colorScheme(obj);
 		actionList(obj);

@@ -24,6 +24,7 @@ public abstract class SwingManager extends WindowFinder{
 		activate();
 		ButtonManager.readSettings(this);
 	}
+	/**If a SwingManager hasn't be initialized because of e.g. not having a custom constructor you can call this method to apply the SwingManager.*/
 	public void load() {
 		activate();
 		ButtonManager.readSettings(this);		
@@ -58,6 +59,7 @@ public abstract class SwingManager extends WindowFinder{
 			activeManager=getManager();
 		}
 	}
+	/**This method processes the annotation for GenerationSettings*/
 	public void genWindowAnnotation(GenerationSettings gs) {
 		int w=mainWindow.getWidth();
 		int h=mainWindow.getHeight();
@@ -140,6 +142,7 @@ public abstract class SwingManager extends WindowFinder{
 		generated.setSize(w+offsetWidth,h+offsetHidth);
 		generated.add(contentOrg);
 	}
+	/**This method let's you specify a custom JFrame as the mainWindow*/
 	public void reset(JFrame jf) {
 		mainWindow=jf;
 		contentOrg=mainWindow.getContentPane();
@@ -150,7 +153,7 @@ public abstract class SwingManager extends WindowFinder{
 	}/**
 	 * Here the content to be added to the Processing window is specified.
 	 * Here you can edit a dummy-JFrame <b>generated</b>.<br>
-	 * Name and Icon will be copied from the processing window.<br>
+	 * Name and icon will be copied from the processing window.<br>
 	 * You can however view and use the original window <b>mainWindow</b><br>
 	 * Don't forget adding the processing-content back at some point.
 	 * It has been put in <b>contentOrg</b>

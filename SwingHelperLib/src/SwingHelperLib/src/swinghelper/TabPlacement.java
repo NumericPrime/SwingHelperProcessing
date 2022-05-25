@@ -22,6 +22,7 @@ public class TabPlacement extends SwingManager {
 		if(Settings.autoAdd) standart=new TabPlacement(Settings.tabName);
 		//if(Settings.autoAdd) standart.stn="Result";
 	}
+	/**The tab name for the processing content is stored here. Editing it will have no effect.<br>Specify it in Settings or if you have autoMerge disabled you can also use it as a constructor argument.*/
 	public String stn="Result";
 	public JTabbedPane jtp=null;
 	@Override

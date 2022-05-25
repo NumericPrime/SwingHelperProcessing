@@ -15,6 +15,6 @@ public @interface ColorScheme {
 	String text() default "";
 	String border() default "";
 	int  thickness() default 0;
-	/**Even though it says the font size is -1 it will just keep the original font size unless a value >0 is given.*/
+	/**Even though it says the font size is -1 it will just keep the original font size unless a value greater than 0 is given.*/
 	int  fontSize() default -1;
 }

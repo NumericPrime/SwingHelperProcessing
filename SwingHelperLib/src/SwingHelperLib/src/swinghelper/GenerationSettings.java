@@ -6,9 +6,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-/**Allows to easily generate an JFrame with the specified properties as <b>Generated</b>
+/**Allows to easily generate an JFrame with the specified properties as <b>generated</b> (the dummy JFrame)
  * <br>You can only attach this to a class or the merge method of a SwingMerger.
- * @autor NumericPrime
+ * @author NumericPrime
  * */
 @Retention(RUNTIME)
 @Target({METHOD,TYPE})

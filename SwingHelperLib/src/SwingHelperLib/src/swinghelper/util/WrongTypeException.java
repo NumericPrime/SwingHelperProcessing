@@ -1,7 +1,7 @@
 package swinghelper.util;
 
 /**This exception isn't used jet but will be in the next version.
- * @autor NumericPrime*/
+ * @author NumericPrime*/
 public class WrongTypeException extends RuntimeException {
 
 	private static final long serialVersionUID = -5989736344138095134L;

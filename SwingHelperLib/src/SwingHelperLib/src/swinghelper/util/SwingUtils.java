@@ -12,7 +12,7 @@ import javax.swing.JScrollPane;
 import java.lang.reflect.*;
 
 /**A utility class to make constructing containers to add to the processing window easier.
- * @autor NumericPrime
+ * @author NumericPrime
  * */
 public class SwingUtils {
 	public static Object ref=null;

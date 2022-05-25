@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 
 /**This class finds the processing window and gives it to the SwingManagers.
- * @autor NumericPrime*/
+ * @author NumericPrime*/
 public class WindowFinder {
 	/**The processing window is stored here and can be used by the SwingManagers.*/
 	public static JFrame mainWindow=null;
