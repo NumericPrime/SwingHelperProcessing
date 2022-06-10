@@ -4,8 +4,6 @@ A library for using swing components with Processing.
 Adding swing components to processing is hard this library makes this process easier by adding a few classes and annotations that allow to merge a processing content with swing components. The library adds a few classes to do that in various ways and allow including custom ways with just a few lines of code. The library also includes utility to format buttons by e.g. edit their color or strap methods onto them along with a few other QOL functions.
 
 (under construction)
-This is an example using just normal swing without my library:
-
 Here is a small example using my library that allows using swing components with Processing:
 
 <details><summary>Example</summary>
@@ -107,6 +105,8 @@ Here is a small example using my library that allows using swing components with
 ```
   
 </details>
+
+This is an example using just normal swing without my library:
 
 <details><summary>Example</summary>
   
