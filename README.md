@@ -5,6 +5,8 @@ Adding swing components to processing is hard this library makes this process ea
 
 (under construction)
 This is an example using just normal swing without my library:
+<details><summary>Example</summary>
+
 ```processing
 import javax.swing.*;
 import java.awt.event.*;
@@ -127,8 +129,11 @@ void dupeText() {
   editor.setText(editor.getText()+"\n"+editor.getText());
 }
 ```
+</details>
 and this would be the same example using my library:
 
+<details><summary>Example</summary>
+  
 ```processing
 import swinghelper.*;
 import swinghelper.util.*;
@@ -211,3 +216,5 @@ void exitProgram() {
   exit();
 }
 ```
+
+</details>
