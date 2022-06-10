@@ -127,3 +127,87 @@ void dupeText() {
   editor.setText(editor.getText()+"\n"+editor.getText());
 }
 ```
+and this would be the same example using my library:
+
+```processing
+import swinghelper.*;
+import swinghelper.util.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+void setup() {
+  //processes the annotations
+  ButtonManager.readSettings(this);
+  setupFrame();
+  
+  @SuppressWarnings("unused")
+    SwingManager sm=new SwingManager() {
+      //allows a custon name and icon
+    @RestrictedMerger(transfer_name=false, transfer_icon=false)
+    //generates a resizable window with set size and title
+      @GenerationSettings(width=500, height=500, name="Example",auto_add=false)
+      public void merge()
+    {
+      ImageIcon iconMain=new ImageIcon(sketchPath("data/Icon.png"));
+      generated.setIconImage(iconMain.getImage());
+      generated.add(editor, "Center");
+      generated.setJMenuBar(menubar);
+    }
+  };
+}
+//define custom styling for the editor
+@ColorScheme(text="white", background="black", fontSize=14, border="255", thickness=3)
+  JEditorPane editor=new JEditorPane();
+
+  JMenuBar menubar=new JMenuBar();
+  JMenu general=new JMenu("General");
+  JMenu edit=new JMenu("Edit");
+
+//These Annotations determin the method to be called on button press
+@MethodButton(method="dupeText")
+  JMenuItem button=new JMenuItem("Duplicate");
+
+@MethodButton(method="deleteText")
+  JMenuItem button2=new JMenuItem("Delete Text");
+
+@MethodButton(method="allCaps")
+  JMenuItem button3=new JMenuItem("ALL CAPS");
+
+@MethodButton(method="exitProgram")
+  JMenuItem button4=new JMenuItem("Exit");
+
+//To save space the color scheme will be applied to an array
+@ColorScheme(text="white", background="black", fontSize=14)
+  JComponent colorschemapplied[]={button, button2, button3, button4,menubar,general,edit};
+void setupFrame() {
+  //add the submenus to the bar
+  menubar.add(general);
+  menubar.add(edit);
+  //adds the options to the submenu
+  general.add(button2);
+  general.add(button4);
+  edit.add(button);
+  //You can also use a dividing line to separate different sections
+  edit.addSeparator();
+  edit.add(button3);
+
+  //You can also add an accellerator that makes a button go off when a key is pressed
+  button.setAccelerator(KeyStroke.getKeyStroke("control D"));
+  button2.setAccelerator(KeyStroke.getKeyStroke("control N"));
+  button3.setAccelerator(KeyStroke.getKeyStroke("control alt C"));
+  button4.setAccelerator(KeyStroke.getKeyStroke("control alt E"));
+}
+void dupeText() {
+  editor.setText(editor.getText()+"\n"+editor.getText());
+}
+void deleteText() {
+  editor.setText("");
+}
+void allCaps() {
+  editor.setText(editor.getText().toUpperCase());
+}
+void exitProgram() {
+  exit();
+}
+```
